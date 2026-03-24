@@ -1,0 +1,15 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2446ff"/>
+      <stop offset="100%" stop-color="#53d7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="24" fill="#0f1830"/>
+  <rect x="24" y="24" width="752" height="402" rx="20" fill="url(#g1)" fill-opacity="0.24"/>
+  <path d="M70 330c90-80 160-20 250-100s130-120 230-35 120 55 180 10" stroke="#99f5ff" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="185" cy="270" r="14" fill="#ffffff"/>
+  <circle cx="360" cy="210" r="14" fill="#ffffff"/>
+  <circle cx="540" cy="145" r="14" fill="#ffffff"/>
+  <text x="55" y="85" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700" fill="#eaf6ff">Crop Yield Forecast</text>
+</svg>
