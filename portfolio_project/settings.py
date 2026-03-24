@@ -86,13 +86,18 @@ if DATABASE_URL:
         )
     }
 else:
-    sqlite_path = Path("/tmp/db.sqlite3") if IS_VERCEL else BASE_DIR / "db.sqlite3"
+    tmp_dir = Path("/tmp")
+    sqlite_path = tmp_dir / "db.sqlite3" if IS_VERCEL and tmp_dir.exists() else BASE_DIR / "db.sqlite3"
+    sqlite_path.parent.mkdir(parents=True, exist_ok=True)
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": sqlite_path,
         }
     }
+
+# Keep portfolio pages functional even when DB is unavailable on serverless cold starts.
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 
 # Password validation

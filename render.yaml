@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hari-portfolio-static
+    runtime: static
+    buildCommand: |
+      mkdir -p public
+      cp static-index.html public/index.html
+      cp -r static public/static
+    staticPublishPath: ./public
